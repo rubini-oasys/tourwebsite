@@ -1,0 +1,62 @@
+<div class="my-form-container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="my-form">
+    <div class="form-group">
+      <label>Enter username:</label>
+      <input type="text" formControlName="username" class="form-control" required>
+      <div  style="color: red;" *ngIf="myForm.get('username')?.hasError('required') && myForm.get('username')?.touched" class="error-message">
+        Username is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Enter Destination:</label>
+      <select formControlName="destination" class="form-control" required>
+        <option value="" disabled>Select destination</option>
+        <option value="TamilNadu">TamilNadu</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Kerala">Karnataka</option>
+
+      </select>
+      <div    style="color: red;"*ngIf="myForm.get('destination')?.hasError('required') && myForm.get('destination')?.touched" class="error-message">
+        Destination is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Enter persons:</label>
+      <select formControlName="persons" class="form-control" required>
+        <option value="" disabled>Select number of persons</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6+">6+</option>
+      </select>
+      <div  style="color: red;"*ngIf="myForm.get('persons')?.hasError('required') && myForm.get('persons')?.touched" class="error-message">
+        Number of persons is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Enter Packages:</label><br>
+      <input type="radio" formControlName="packages" value="1day" required>   1day
+      <input type="radio" formControlName="packages" value="2days" required>   2days
+      <input type="radio" formControlName="packages" value="3days" required>   3days
+      <input type="radio" formControlName="packages" value="4days" required>   4days
+      <input type="radio" formControlName="packages" value="5days" required>   5days
+      <div style="color: red;" *ngIf="myForm.get('packages')?.hasError('required') && myForm.get('packages')?.touched" class="error-message" style="color: red;">
+        Package selection is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" [disabled]="myForm.invalid!" class="btn btn-primary" data-bs-dismiss="modal" >Submit</button>
+    </div>
+  </form>
+
+  <div>
+    <button type="submit" (click)="goToupdateProduct()" class="btn btn-secondary" data-bs-dismiss="modal">back</button>
+  </div>
+</div>

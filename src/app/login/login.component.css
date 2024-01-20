@@ -1,0 +1,66 @@
+.my-form-container {
+  max-width: 500px; /* Adjust the maximum width as needed */
+  margin: auto;
+  padding: 20px;
+}
+
+.my-form {
+  background-color: #f8f9fa; /* Light gray background color */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+}
+
+.btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Bootstrap secondary color */
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+

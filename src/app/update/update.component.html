@@ -1,0 +1,50 @@
+<form  class="my-form">
+    <div class="form-group">
+      <label>Enter username:</label>
+      <input type="text" name="name" [(ngModel)]="p.username" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Enter Destination:</label>
+      <select id="state1" name="state1" class="form-control">
+        <option value="Andhra Pradesh">TamilNadu</option>
+        <option value="Arunachal Pradesh">Andhra Pradesh</option>
+        <option value="Assam">Kerala</option>
+        <option value="Bihar">Karnataka</option>
+        <option value="Chhattisgarh">Mumbai</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Simla</option>
+        <option value="Haryana">SriLanka</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jharkhand">Jharkhand</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Enter persons:</label>
+      <select type="select" name="persons"  [(ngModel)]="p.persons" class="form-control">
+   <option value="">1</option>
+   <option value="">2</option>
+   <option value="">3</option>
+   <option value="">4</option>
+   <option value="">5</option>
+   <option value="">6+</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Enter Packages:</label><br>
+      <input type="radio" [(ngModel)]="p.packages" name="packages" value="1day" class="">   1day
+      <input type="radio" [(ngModel)]="p.packages" name="packages" value="2days" class="">   2days
+      <input type="radio" [(ngModel)]="p.packages" name="packages" value="3days" class="">   3days
+      <input type="radio" [(ngModel)]="p.packages" name="packages" value="4days" class="">   4days
+      <input type="radio" [(ngModel)]="p.packages" name="packages" value="5days" class="">   5days
+
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="goToUpdate()" data-bs-dismiss="modal">Submit</button>
+    </div>
+  </form>
+
+  <div>
